@@ -1,0 +1,10 @@
+apiVersion: minecraft.tgik.io/v1alpha1
+kind: Server
+metadata:
+  name: my-server
+spec:
+  EULA: true
+  serverName: "Joe's cool server"
+  serverType: "VANILLA"
+  ops: ["jbeda"]
+  allowlist: ["jbeda"]
