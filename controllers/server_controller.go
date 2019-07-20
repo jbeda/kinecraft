@@ -138,7 +138,7 @@ func (r *ServerReconciler) constructPod(s *minecraftv1alpha1.Server) (*core.Pod,
 	addEnv("OPS", strings.Join(s.Spec.Ops, ","))
 	addEnv("WHITELIST", strings.Join(s.Spec.Allowlist, ","))
 
-	if err := ctrl.SetControllerReference(pod, s, r.Scheme); err != nil {
+	if err := ctrl.SetControllerReference(s, pod, r.Scheme); err != nil {
 		return nil, err
 	}
 	return pod, nil
