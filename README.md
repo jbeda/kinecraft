@@ -4,9 +4,9 @@ This is a very very raw controller written during TGIK 083 live stream.  Details
 
 ## TODO
 
-* Populate status
-* Recreate Pod when parameters change
+* ~Populate status~
 * Create and manage a Service along with each Pod
+* Recreate Pod when parameters change
 * +kubebulder:validation:Enum for serverType
 * Build a minecraft protocol proxy
 * Define CRDs for plugins

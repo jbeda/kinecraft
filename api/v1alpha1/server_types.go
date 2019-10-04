@@ -43,13 +43,14 @@ type ServerSpec struct {
 
 // ServerStatus defines the observed state of Server
 type ServerStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	PodName string `json:"podName,omitempty"`
+	Running bool   `json:"running,omitempty"`
 }
 
 // +kubebuilder:object:root=true
 
 // Server is the Schema for the servers API
+// +kubebuilder:subresource:status
 type Server struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
